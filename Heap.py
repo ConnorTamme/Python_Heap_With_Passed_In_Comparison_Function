@@ -36,6 +36,8 @@ class Heap:
                 self.heap[idx] = self.heap[largerChild]
                 self.heap[largerChild] = tmp
                 idx = largerChild
+            else:
+                break
         return tmp
     
     def Push(self,item):
