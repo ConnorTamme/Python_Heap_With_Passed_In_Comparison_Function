@@ -20,7 +20,7 @@ class Heap:
     def Pop(self):
         if len(self.heap) == 0:
             return 0
-        tmp = self.heap[0]
+        ret = self.heap[0]
         self.heap[0] = self.heap[len(self.heap)-1]
         del self.heap[len(self.heap)-1]
         idx = 0
@@ -38,7 +38,7 @@ class Heap:
                 idx = largerChild
             else:
                 break
-        return tmp
+        return ret
     
     def Push(self,item):
         self.heap.append(item)
